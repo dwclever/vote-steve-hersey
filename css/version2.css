@@ -724,6 +724,10 @@ a {
 		background: transparent;
 		justify-self: end;
 	}
+
+	.v2-pullquote::before {
+		color: #fddc6e;
+	}
 }
 
 @media (max-width: 900px) {
@@ -818,6 +822,13 @@ a {
 	.v2-banner__inner {
 		flex-direction: column;
 		gap: 0.25rem;
+	}
+
+	.v2-pullquote::before {
+		color: #fddc6e;
+		opacity: 15%;
+		margin-top: -12%;
+		margin-left: -10%;
 	}
 }
 
