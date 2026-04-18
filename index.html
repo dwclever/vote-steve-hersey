@@ -8,103 +8,85 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 		<link href="css/style.css" rel="stylesheet" />
 	</head>
-	<body class="bg-body-tertiary">
+	<body class="bg-white">
 		<nav class="navbar navbar-expand-lg sticky-top navbar-dark campaign-nav py-2 shadow-sm">
 			<div class="container">
-				<a class="navbar-brand fw-bold text-uppercase ls-1 d-flex align-items-center gap-2" href="#">
+				<a class="navbar-brand fw-bold text-uppercase d-flex align-items-center gap-2" href="#">
 					<span class="brand-mark"></span>
 					Steve Hersey
 				</a>
-				<button
-					class="navbar-toggler border-0 shadow-none"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navMenu"
-					aria-controls="navMenu"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navMenu">
-					<ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2 text-center text-lg-start">
-						<li class="nav-item">
-							<a class="nav-link px-3 py-2 rounded-pill" href="#about">Version 1</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link px-3 py-2 rounded-pill" href="#priorities">Version 2</a>
-						</li>
-					</ul>
-				</div>
 			</div>
 		</nav>
 
-		<header class="hero py-5 py-lg-6">
+		<header class="hero bg-white py-3 py-md-4 py-lg-5">
 			<div class="container">
-				<div class="row align-items-center g-4 g-lg-5">
-					<div class="col-lg-7 text-center text-lg-start">
-						<div class="mb-3">
-							<span class="badge rounded-pill text-bg-light text-dark px-3 py-2">Putnam County Leadership</span>
-						</div>
-						<h1 class="display-4 display-lg-3 fw-bold mb-3">Wisdom You Can Trust. Leadership You Know.</h1>
-						<p class="lead mb-4">
+				<div class="row align-items-center g-3 g-md-4 g-lg-5">
+					<div class="col-lg-7 min-w-0 text-center text-lg-start">
+						<h1 class="display-5 display-lg-4 fw-bold mb-2 mb-md-3 text-wrap-clean">
+							Wisdom You Can Trust. Leadership You Know.
+						</h1>
+						<p class="lead mb-3 mb-md-4">
 							In local government, there is no substitute for a proven track record. For three decades, Steve Hersey has been
 							a fixture of the Putnam County community—not just as a resident, but as a leader who was at the head of the
 							table during our most critical moments.
 						</p>
-						<div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-2">
-							<a href="#priorities" class="btn btn-warning btn-lg fw-semibold px-4">See Priorities</a>
-							<a href="#about" class="btn btn-outline-light btn-lg px-4">Learn More</a>
-						</div>
 					</div>
-					<div class="col-lg-5 text-center">
-						<img src="./images/hersey.jpg" alt="Steve Hersey" class="img-fluid rounded-4 shadow campaign-photo" />
+					<div class="col-lg-5 text-center min-w-0">
+						<img
+							src="./images/hersey.jpg"
+							alt="Steve Hersey"
+							class="img-fluid rounded-4 shadow-sm campaign-photo"
+							style="max-height: 100vh"
+						/>
 					</div>
 				</div>
 			</div>
 		</header>
 
-		<section id="about" class="py-4 py-lg-5">
-			<div class="container">
-				<div class="section-panel text-center">
-					<h2 class="fw-bold mb-2">STEVE HERSEY</h2>
-					<p class="h4 mb-0">for Board of Commissioner Chair</p>
+		<section id="about" class="py-2 py-md-3 py-lg-4 w-100">
+			<div class="section-panel text-center py-2 py-md-3 py-lg-4 px-3 px-md-4 px-lg-5 mx-auto">
+				<div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-0 gap-sm-2 text-center">
+					<h2 class="fw-bold mb-0 text-nowrap">STEVE</h2>
+					<h2 class="fw-bold mb-0 text-nowrap">HERSEY</h2>
 				</div>
+				<p class="h4 mb-0 text-wrap-clean">for Board of Commissioner Chair</p>
 			</div>
 		</section>
 
-		<section id="priorities" class="py-4 py-lg-5">
+		<section id="priorities" class="py-2 py-md-3 py-lg-4 section-border-blue-gold">
 			<div class="container">
-				<div class="row g-4 g-lg-5">
-					<div class="col-lg-6">
-						<div class="content-card h-100 p-4 p-lg-5">
-							<h2 class="h3 fw-bold mb-3">While others may offer promises, Steve offers proven results:</h2>
-							<hr class="section-rule mb-4" />
-							<ul class="list-unstyled mb-0 d-grid gap-3">
-								<li class="d-flex gap-3">
-									<i class="fa-solid fa-circle-check text-warning mt-1"></i>
-									<span
+				<div class="row g-3 g-lg-4">
+					<div class="col-lg-6 min-w-0">
+						<div class="content-card h-100 p-3 p-md-4 p-lg-5">
+							<h2 class="h3 fw-bold mb-2 mb-md-3 text-wrap-clean">
+								While others may offer promises, Steve offers proven results:
+							</h2>
+							<hr class="section-rule mb-3 mb-md-4" />
+							<ul class="list-unstyled mb-0 d-grid gap-2 gap-md-3">
+								<li class="d-flex gap-2 gap-md-3 min-w-0">
+									<i class="fa-solid fa-circle-check text-warning mt-1 flex-shrink-0"></i>
+									<span class="text-wrap-clean min-w-0"
 										><b>30 Years of Community Roots:</b> Deep-seated involvement in the fabric of Putnam County since
 										2003.</span
 									>
 								</li>
-								<li class="d-flex gap-3">
-									<i class="fa-solid fa-circle-check text-warning mt-1"></i>
-									<span
+								<li class="d-flex gap-2 gap-md-3 min-w-0">
+									<i class="fa-solid fa-circle-check text-warning mt-1 flex-shrink-0"></i>
+									<span class="text-wrap-clean min-w-0"
 										><b>9 Years as School Board Chairman:</b> A steady hand leading our educational system and investing
 										in our future.</span
 									>
 								</li>
-								<li class="d-flex gap-3">
-									<i class="fa-solid fa-circle-check text-warning mt-1"></i>
-									<span
+								<li class="d-flex gap-2 gap-md-3 min-w-0">
+									<i class="fa-solid fa-circle-check text-warning mt-1 flex-shrink-0"></i>
+									<span class="text-wrap-clean min-w-0"
 										><b>6 Years as County Commission Chairman:</b> Mastered the complexities of local governance and
 										multi-million dollar budgeting.</span
 									>
 								</li>
-								<li class="d-flex gap-3">
-									<i class="fa-solid fa-circle-check text-warning mt-1"></i>
-									<span
+								<li class="d-flex gap-2 gap-md-3 min-w-0">
+									<i class="fa-solid fa-circle-check text-warning mt-1 flex-shrink-0"></i>
+									<span class="text-wrap-clean min-w-0"
 										><b>Current District 3 Commissioner:</b> Continuing the fight for transparency and smart growth
 										every single day.</span
 									>
@@ -112,32 +94,33 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-lg-6">
-						<div class="content-card h-100 p-4 p-lg-5">
-							<h2 class="h3 fw-bold mb-3">
+
+					<div class="col-lg-6 min-w-0">
+						<div class="content-card h-100 p-3 p-md-4 p-lg-5">
+							<h2 class="h3 fw-bold mb-2 mb-md-3 text-wrap-clean">
 								As Board Chair, Steve will <span class="text-warning">prioritize</span> what matters most:
 							</h2>
-							<hr class="section-rule mb-4" />
-							<ul class="list-unstyled mb-0 d-grid gap-3">
-								<li class="d-flex gap-3">
-									<i class="fa-solid fa-shield-halved text-warning mt-1"></i>
-									<span
+							<hr class="section-rule mb-3 mb-md-4" />
+							<ul class="list-unstyled mb-0 d-grid gap-2 gap-md-3">
+								<li class="d-flex gap-2 gap-md-3 min-w-0">
+									<i class="fa-solid fa-shield-halved text-warning mt-1 flex-shrink-0"></i>
+									<span class="text-wrap-clean min-w-0"
 										><b>END THE "BAIT &amp; SWITCH"</b> Steve demands that rezonings be <b>Project-Specific.</b> No more
 										switching the plan after the vote is cast. What they promise is what they must build—or the process
 										starts over.</span
 									>
 								</li>
-								<li class="d-flex gap-3">
-									<i class="fa-solid fa-house text-warning mt-1"></i>
-									<span
+								<li class="d-flex gap-2 gap-md-3 min-w-0">
+									<i class="fa-solid fa-house text-warning mt-1 flex-shrink-0"></i>
+									<span class="text-wrap-clean min-w-0"
 										><b>STOP COMMERCIAL INVASION</b> Residential areas are for families, not commercial sprawl. Steve
 										has the 30-year track record to keep business where it belongs and protect your property
 										values.</span
 									>
 								</li>
-								<li class="d-flex gap-3">
-									<i class="fa-solid fa-sack-dollar text-warning mt-1"></i>
-									<span
+								<li class="d-flex gap-2 gap-md-3 min-w-0">
+									<i class="fa-solid fa-sack-dollar text-warning mt-1 flex-shrink-0"></i>
+									<span class="text-wrap-clean min-w-0"
 										><b>FISCAL ACCOUNTABILITY</b> With 6 years as your former Commission Chair, Steve treats your tax
 										dollars with executive-level discipline. He knows how to manage a budget so taxpayers don't get
 										stuck with the bill for growth.</span
@@ -150,10 +133,10 @@
 			</div>
 		</section>
 
-		<section class="py-4 py-lg-5">
+		<section class="py-3 py-md-4 py-lg-5">
 			<div class="container">
-				<div class="callout text-center p-4 p-lg-5">
-					<h2 class="fw-bold mb-0">
+				<div class="callout text-center p-3 p-md-4 p-lg-5 mx-auto">
+					<h2 class="fw-bold mb-0 fs-4 fs-md-3 text-wrap-clean">
 						Putnam County doesn't have time for a learning curve. We need a Chairman who has already led the Board of Education,
 						chaired the County Commission, and spent 30 years protecting our community.
 					</h2>
@@ -161,14 +144,16 @@
 			</div>
 		</section>
 
-		<footer class="py-4 py-lg-5 footer-band">
+		<footer class="footer-overlay py-3 py-md-4 py-lg-5">
 			<div class="container">
-				<div class="footer-card text-center p-4 p-lg-5">
-					<p class="text-uppercase fw-bold mb-2 small text-warning">Vote</p>
-					<h2 class="fw-bold mb-2">STEVE HERSEY</h2>
-					<p class="h4 mb-2">FOR CHAIRMAN</p>
-					<p class="mb-2">Republican Primary - May 19</p>
-					<p class="mb-0 fst-italic">Early Voting Starts April 27</p>
+				<div class="footer-hero position-relative overflow-hidden rounded-4">
+					<div class="footer-card text-center p-3 p-md-4 p-lg-5 mx-auto">
+						<p class="text-uppercase fw-bold mb-1 mb-md-2 small text-warning text-wrap-clean">Vote</p>
+						<h2 class="fw-bold mb-1 mb-md-2 text-wrap-clean">STEVE HERSEY</h2>
+						<p class="h4 mb-1 mb-md-2 text-wrap-clean">FOR CHAIRMAN</p>
+						<p class="mb-1 mb-md-2 text-wrap-clean">Republican Primary - May 19</p>
+						<p class="mb-0 fst-italic text-wrap-clean">Early Voting Starts April 27</p>
+					</div>
 				</div>
 			</div>
 		</footer>
