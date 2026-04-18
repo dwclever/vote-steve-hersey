@@ -2,6 +2,7 @@
 	--section-border-color: #0b2f6b;
 	--campaign-gold-color: #d4af37;
 	--campaign-blue-dark: #071f47;
+	--campaign-blue-light: #e8f1fd;
 	--campaign-text: #101828;
 	--section-border-width: 0.4rem;
 	--section-border-gap: 0.4rem;
@@ -14,20 +15,34 @@ html {
 body {
 	color: var(--campaign-text);
 	overflow-x: hidden;
+	background-color: #fff;
 }
 
 .min-w-0 {
 	min-width: 0;
+	overflow: hidden;
 }
 
 .text-wrap-clean {
-	overflow-wrap: normal;
+	overflow-wrap: break-word;
 	word-break: normal;
 	hyphens: auto;
 }
 
+.hero-strip {
+	height: 0.5rem;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		var(--section-border-color),
+		var(--campaign-gold-color),
+		var(--section-border-color),
+		transparent
+	);
+}
+
 .campaign-nav {
-	background: linear-gradient(90deg, var(--campaign-blue-dark), var(--section-border-color));
+	background: linear-gradient(90deg, var(--campaign-blue-dark), #0b3f7b);
 }
 
 .brand-mark {
@@ -92,16 +107,11 @@ body {
 	border-bottom: 0.35rem solid var(--section-border-color);
 }
 
-.content-card,
-.callout,
-.footer-card {
+.content-card {
 	background: #fff;
 	border-radius: 1rem;
-	box-shadow: 0 0.5rem 1.5rem rgba(16, 24, 40, 0.08);
-}
-
-.content-card {
 	border: 1px solid rgba(11, 47, 107, 0.12);
+	box-shadow: 0 0.5rem 1.5rem rgba(16, 24, 40, 0.08);
 }
 
 .section-rule {
@@ -110,9 +120,12 @@ body {
 }
 
 .callout {
+	background: #fff;
 	border: 0.35rem solid var(--campaign-gold-color);
 	max-width: 60rem;
 	width: 100%;
+	border-radius: 1rem;
+	box-shadow: 0 0.5rem 1.5rem rgba(16, 24, 40, 0.08);
 }
 
 .footer-overlay {
@@ -120,7 +133,7 @@ body {
 }
 
 .footer-hero {
-	min-height: 260px;
+	min-height: 280px;
 	background: linear-gradient(rgba(7, 31, 71, 0.18), rgba(7, 31, 71, 0.18)), url("../images/wavingflagwgold.jpg");
 	background-position: center;
 	background-size: cover;
@@ -128,13 +141,17 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 1rem;
+	padding: 1rem 0.75rem;
+	border: 0.35rem solid var(--campaign-gold-color);
 }
 
 .footer-card {
 	max-width: 42rem;
 	width: 100%;
+	background: #fff;
+	border-radius: 1rem;
 	border: 1px solid rgba(11, 47, 107, 0.12);
+	box-shadow: 0 0.5rem 1.5rem rgba(16, 24, 40, 0.08);
 }
 
 h1 {
@@ -152,23 +169,37 @@ h3 {
 	line-height: 1.3;
 }
 
+.btn-warning {
+	--bs-btn-bg: var(--campaign-gold-color);
+	--bs-btn-border-color: var(--campaign-gold-color);
+	--bs-btn-hover-bg: #e6c14f;
+	--bs-btn-hover-border-color: #e6c14f;
+	--bs-btn-focus-shadow-rgb: 212, 175, 55;
+	--bs-btn-disabled-bg: #f9e9a7;
+	--bs-btn-disabled-border-color: #f9e9a7;
+}
+
 @media (max-width: 575.98px) {
 	.navbar-brand {
 		font-size: 1rem;
 	}
 
 	.hero {
-		padding-top: 1rem !important;
-		padding-bottom: 1rem !important;
+		padding-top: 1.75rem !important;
+		padding-bottom: 1.75rem !important;
+	}
+
+	.hero-strip {
+		height: 0.4rem;
 	}
 
 	.display-5 {
-		font-size: 1.4rem;
+		font-size: 1.5rem;
 	}
 
 	.lead {
 		font-size: 0.95rem;
-		line-height: 1.45;
+		line-height: 1.5;
 	}
 
 	.section-panel {
@@ -176,7 +207,7 @@ h3 {
 	}
 
 	.section-panel h2 {
-		font-size: 1.2rem;
+		font-size: 1.25rem;
 	}
 
 	.section-panel .h4 {
@@ -203,6 +234,6 @@ h3 {
 
 	.footer-hero {
 		min-height: auto;
-		padding: 0.5rem 0;
+		padding: 1rem 0;
 	}
 }
