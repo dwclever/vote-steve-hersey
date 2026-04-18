@@ -1,0 +1,15 @@
+:root {
+	--section-border-color: darkblue;
+	--campaign-gold-color: gold;
+}
+
+section {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	border-top: 0.5rem solid var(--section-border-color);
+	border-bottom: 0.5rem solid var(--section-border-color);
+}
+
+.fill-gold {
+	background-color: var(--campaign-gold-color);
+}
