@@ -1,6 +1,6 @@
 :root {
 	--section-border-color: #0b2f6b;
-	--campaign-gold-color: #d4af37;
+	--campaign-gold-color: #ffc918;
 	--campaign-blue-dark: #071f47;
 	--campaign-blue-light: #e8f1fd;
 	--campaign-text: #101828;
@@ -27,6 +27,21 @@ body {
 	overflow-wrap: break-word;
 	word-break: normal;
 	hyphens: auto;
+}
+
+#hersey-image {
+	position: relative;
+	background: linear-gradient(160deg, var(--navy-light), var(--navy-mid));
+	overflow: hidden;
+	grid-template-columns: 1fr;
+}
+
+#hersey-image ::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to right, var(--navy) 0%, transparent 30%);
+	z-index: 1;
 }
 
 .hero-strip {
@@ -118,6 +133,16 @@ body {
 	background: var(--campaign-gold-color);
 	border-top: 0.35rem solid var(--section-border-color);
 	border-bottom: 0.35rem solid var(--section-border-color);
+}
+
+.content-card-square {
+	border: 0.35rem solid var(--section-border-color) !important;
+	border-radius: 1rem;
+	background: #fff;
+	width: 12rem;
+	height: 12rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .content-card {
