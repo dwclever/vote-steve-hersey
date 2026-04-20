@@ -845,6 +845,44 @@ a {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+.v2-footer__email {
+	margin-top: 2rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-family: "Barlow Condensed", sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	color: rgba(255, 255, 255, 0.78);
+	padding: 0.35rem 0;
+	border-bottom: 1px solid var(--gold);
+	transition:
+		color 0.2s ease,
+		border-color 0.2s ease,
+		opacity 0.2s ease;
+}
+
+.v2-footer__email i {
+	color: var(--gold-pale);
+	opacity: 0.9;
+	font-size: 0.95rem;
+}
+
+.v2-footer__email a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.v2-footer__email:hover {
+	color: var(--white);
+	border-bottom-color: var(--gold);
+}
+
+.v2-footer__email:hover i {
+	color: var(--gold-bright);
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
 	.v2-poster-row__inner {
