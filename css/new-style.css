@@ -1104,7 +1104,7 @@ a {
 
 .v2-donate__presets {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
 	gap: 0.6rem;
 	margin-bottom: 1.5rem;
 }
@@ -1126,6 +1126,11 @@ a {
 }
 
 .v2-donate__preset-btn:hover {
+	background: var(--navy);
+	color: var(--white);
+}
+
+.v2-donate__preset-btn.active {
 	background: var(--navy);
 	color: var(--white);
 }
@@ -1160,6 +1165,98 @@ a {
 	outline: none;
 	border-color: var(--navy);
 	box-shadow: 0 0 0 3px rgba(11, 47, 107, 0.12);
+}
+
+/* Field rows — city/state/zip, occupation/employer */
+.v2-donate__field-row {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1.3fr;
+	gap: 0.75rem;
+	margin-bottom: 1.25rem;
+}
+
+.v2-donate__field-row .v2-donate__field {
+	margin-bottom: 0;
+}
+
+.v2-donate__field-row:has(#donateOccupation) {
+	grid-template-columns: 1fr 1fr;
+}
+
+.v2-donate__required {
+	color: var(--red);
+}
+
+.v2-donate__helper-text {
+	font-family: "Barlow", sans-serif;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--text-mid);
+	margin-bottom: 1rem;
+}
+
+.v2-donate__amount-line {
+	font-family: "Barlow Condensed", sans-serif;
+	font-weight: 700;
+	font-size: 1.1rem;
+	color: var(--navy);
+	margin-bottom: 0.5rem;
+}
+
+.v2-donate__error {
+	font-family: "Barlow", sans-serif;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--red);
+	margin-bottom: 0.75rem;
+}
+
+.v2-donate__error.is-hidden {
+	display: none;
+}
+
+/* Details view — collapsed until an amount is picked, then opens */
+.v2-donate__details {
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition:
+		max-height 0.3s ease,
+		opacity 0.25s ease,
+		margin 0.3s ease;
+}
+
+.v2-donate__details.is-open {
+	max-height: 2400px;
+	opacity: 1;
+	margin-top: 1.25rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid rgba(11, 47, 107, 0.15);
+}
+
+.v2-donate__link-btn--up i {
+	margin-right: 0.4rem;
+}
+
+/* Certify checkbox */
+.v2-donate__checkbox {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.6rem;
+	font-family: "Barlow", sans-serif;
+	font-size: 0.8rem;
+	line-height: 1.4;
+	color: var(--text-mid);
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.v2-donate__checkbox input[type="checkbox"] {
+	flex: 0 0 auto;
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+	accent-color: var(--navy);
 }
 
 .v2-donate__submit-btn {
@@ -1273,6 +1370,129 @@ a {
 	.v2-donate__presets {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	.v2-donate__field-row {
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	.v2-donate__field-row:has(#donateOccupation) {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ─── THANK-YOU MODAL ─────────────────────────────────
+   Framework-free equivalent of a Bootstrap modal, styled to
+   match the rest of the v2- system (gold top rule, Playfair
+   headline, navy/red/gold palette). */
+.v2-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	padding: 1.25rem;
+}
+
+.v2-modal.is-open {
+	display: flex;
+}
+
+.v2-modal__overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(7, 30, 69, 0.65);
+}
+
+.v2-modal__dialog {
+	position: relative;
+	background: var(--white);
+	border-top: 4px solid var(--gold);
+	border-radius: 0 0 6px 6px;
+	max-width: 460px;
+	width: 100%;
+	box-shadow: 0 12px 40px rgba(7, 30, 69, 0.25);
+	animation: v2-modal-in 0.2s ease-out;
+}
+
+@keyframes v2-modal-in {
+	from {
+		opacity: 0;
+		transform: translateY(12px) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+.v2-modal__close {
+	position: absolute;
+	top: 0.75rem;
+	right: 0.9rem;
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	line-height: 1;
+	color: var(--text-mid);
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.v2-modal__close:hover {
+	opacity: 1;
+	color: var(--navy);
+}
+
+.v2-modal__body {
+	padding: 2.5rem 2rem 2rem;
+	text-align: center;
+}
+
+.v2-modal__icon {
+	font-size: 2.5rem;
+	color: var(--gold-bright);
+	margin-bottom: 0.75rem;
+	display: block;
+}
+
+.v2-modal__body h3 {
+	font-family: "Playfair Display", serif;
+	font-weight: 900;
+	font-size: 1.5rem;
+	color: var(--navy);
+	margin-bottom: 0.5rem;
+}
+
+.v2-modal__body p {
+	font-family: "Barlow", sans-serif;
+	font-size: 1rem;
+	color: var(--text-dark);
+	margin-bottom: 0.4rem;
+}
+
+.v2-modal__amount-line {
+	font-family: "Barlow Condensed", sans-serif;
+	font-weight: 700;
+	color: var(--navy);
+	margin-bottom: 1.25rem !important;
+}
+
+.v2-modal__fine-print {
+	font-size: 0.82rem;
+	font-weight: 600;
+	color: var(--text-mid);
+	margin-bottom: 1.5rem !important;
+}
+
+.v2-modal__body .v2-donate__submit-btn {
+	width: auto;
+	padding: 0.7rem 2rem;
+}
+
+body.v2-modal-open {
+	overflow: hidden;
 }
 
 /* RESPONSIVE */
