@@ -1497,29 +1497,28 @@ body.v2-modal-open {
 
 /* RESPONSIVE */
 @media (min-width: 901px) {
+	.v2-hero__grid {
+		position: relative;
+	}
+
 	.v2-hero__photo {
-		background: transparent;
-		justify-self: end;
-		height: 100%;
-		display: flex;
-		align-items: flex-end;
-		justify-content: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
 	}
 
 	.v2-pullquote::before {
 		color: #f7e09470;
 	}
 
-	.v2-hero__grid {
-		height: 100%;
-	}
-
 	.v2-hero__photo img {
-		width: 100%;
+		display: block;
+		width: auto;
 		height: 100%;
-		max-height: none;
-		object-fit: cover;
-		object-position: center top;
+		max-width: 100%;
+		object-fit: contain;
+		object-position: center bottom;
 		margin: 0;
 	}
 }
